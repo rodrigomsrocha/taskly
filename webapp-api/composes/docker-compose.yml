@@ -1,0 +1,14 @@
+services:
+  api-db:
+    image: postgres:13.2-alpine
+    environment:
+      POSTGRES_USER: taskly
+      POSTGRES_PASSWORD: taskly
+      POSTGRES_DB: taskly
+    volumes:
+      - api-db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  api-db-data:
