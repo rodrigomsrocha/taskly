@@ -1,7 +1,7 @@
 import { openAPI, username } from "better-auth/plugins";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { db } from "./db";
+import { db } from "../db";
 
 export const auth = betterAuth({
   plugins: [openAPI()],
